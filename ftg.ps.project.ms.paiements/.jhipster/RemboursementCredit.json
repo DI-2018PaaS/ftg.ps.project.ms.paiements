@@ -1,0 +1,43 @@
+{
+    "name": "RemboursementCredit",
+    "fields": [
+        {
+            "fieldName": "idRemboursement",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateRemboursement",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "idOwner",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "remboursementCredit",
+            "otherEntityName": "pret",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "remboursementCredit"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "remboursementCredit",
+            "otherEntityName": "directPaiement",
+            "otherEntityRelationshipName": "remboursementCredit"
+        }
+    ],
+    "changelogDate": "20180727010344",
+    "entityTableName": "remboursement_credit",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "mcsPaiements"
+}

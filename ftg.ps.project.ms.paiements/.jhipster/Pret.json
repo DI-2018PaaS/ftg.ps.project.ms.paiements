@@ -1,0 +1,61 @@
+{
+    "name": "Pret",
+    "fields": [
+        {
+            "fieldName": "numPret",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateCreation",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateMisAjour",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "capitalRestant",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "dateDernierRemb",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "idOwner",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "ligneCredit",
+            "otherEntityName": "ligneCredit",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "pret",
+            "otherEntityName": "etatPret",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "pret"
+        },
+        {
+            "relationshipName": "reglementCommande",
+            "otherEntityName": "reglementCommande",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180727010342",
+    "entityTableName": "pret",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "mcsPaiements"
+}

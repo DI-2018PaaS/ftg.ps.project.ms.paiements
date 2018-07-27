@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Pret.
+    -->
+    <changeSet id="20180727010342-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="ligne_credit_id"
+                                 baseTableName="pret"
+                                 constraintName="fk_pret_ligne_credit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ligne_credit"/>
+
+        <addForeignKeyConstraint baseColumnNames="pret_id"
+                                 baseTableName="pret"
+                                 constraintName="fk_pret_pret_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="etat_pret"/>
+
+        <addForeignKeyConstraint baseColumnNames="reglement_commande_id"
+                                 baseTableName="pret"
+                                 constraintName="fk_pret_reglement_commande_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="reglement_commande"/>
+
+    </changeSet>
+</databaseChangeLog>

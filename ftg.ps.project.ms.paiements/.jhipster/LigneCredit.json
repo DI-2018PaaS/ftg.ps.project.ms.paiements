@@ -1,0 +1,55 @@
+{
+    "name": "LigneCredit",
+    "fields": [
+        {
+            "fieldName": "idLigneCredit",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "libelle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateCreation",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateMisAjour",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "montant",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "idOwner",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "nomFinancier",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ligneCredit",
+            "otherEntityName": "pret",
+            "otherEntityRelationshipName": "ligneCredit"
+        }
+    ],
+    "changelogDate": "20180727010341",
+    "entityTableName": "ligne_credit",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "mcsPaiements"
+}

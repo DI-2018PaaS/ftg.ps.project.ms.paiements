@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity RemboursementCredit.
+    -->
+    <changeSet id="20180727010344-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="remboursement_credit_id"
+                                 baseTableName="remboursement_credit"
+                                 constraintName="fk_remboursement_credit_remboursement_credit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pret"/>
+
+    </changeSet>
+</databaseChangeLog>

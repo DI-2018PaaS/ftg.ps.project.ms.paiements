@@ -1,0 +1,41 @@
+{
+    "name": "ReglementCommande",
+    "fields": [
+        {
+            "fieldName": "idReglement",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateReglement",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "idBonDeCommande",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "reglementCommandePret",
+            "otherEntityName": "pret",
+            "otherEntityRelationshipName": "reglementCommande"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "reglementCommandeDirectPaiement",
+            "otherEntityName": "directPaiement",
+            "otherEntityRelationshipName": "reglementCommande"
+        }
+    ],
+    "changelogDate": "20180727010345",
+    "entityTableName": "reglement_commande",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "mcsPaiements"
+}

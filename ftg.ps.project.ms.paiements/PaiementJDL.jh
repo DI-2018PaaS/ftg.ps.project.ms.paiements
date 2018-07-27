@@ -1,0 +1,54 @@
+entity LigneCredit {
+    idLigneCredit Long,
+    libelle String,
+    description String,
+    dateCreation LocalDate,
+    dateMisAjour LocalDate,
+    montant BigDecimal,
+    idOwner Long,
+    nomFinancier String
+}
+
+entity Pret {
+    numPret Long,
+    dateCreation LocalDate,
+    dateMisAjour LocalDate
+    capitalRestant BigDecimal,
+    dateDernierRemb LocalDate,
+    idOwner Long
+}
+
+entity EtatPret {
+    idEtat Long,
+    libelle String,
+    description String
+}
+
+entity RemboursementCredit {
+    idRemboursement Long,
+    dateRemboursement LocalDate,
+    idOwner Long
+}
+
+entity ReglementCommande {
+    idReglement Long,
+    dateReglement LocalDate,
+    idBonDeCommande Long
+}
+
+entity DirectPaiement {
+    idModePaiement Long,
+    libelle String,
+    description String
+}
+
+relationship OneToMany {
+    LigneCredit to Pret,
+    RemboursementCredit to DirectPaiement,
+    ReglementCommande{reglementCommandePret} to Pret,
+    ReglementCommande{reglementCommandeDirectPaiement} to DirectPaiement
+}
+relationship OneToOne {
+    Pret to EtatPret,
+    RemboursementCredit to Pret
+}

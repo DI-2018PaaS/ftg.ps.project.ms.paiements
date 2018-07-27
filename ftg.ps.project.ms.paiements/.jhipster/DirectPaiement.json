@@ -1,0 +1,41 @@
+{
+    "name": "DirectPaiement",
+    "fields": [
+        {
+            "fieldName": "idModePaiement",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "libelle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "remboursementCredit",
+            "otherEntityName": "remboursementCredit",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "reglementCommande",
+            "otherEntityName": "reglementCommande",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180727010346",
+    "entityTableName": "direct_paiement",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "mcsPaiements"
+}

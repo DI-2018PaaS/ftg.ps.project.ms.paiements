@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "ftg.ps.project.ms.paiements",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "5.1.0",
+    "applicationType": "microservice",
+    "baseName": "mcsPaiements",
+    "packageName": "ftg.ps.project.ms.paiements",
+    "packageFolder": "ftg/ps/project/ms/paiements",
+    "serverPort": "8085",
+    "authenticationType": "uaa",
+    "uaaBaseName": "psUAA",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "a499e6415690b313a451c1cbdfd64bb0f15ae427",
+    "enableTranslation": true,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "clientPackageManager": "yarn",
+    "nativeLanguage": "fr",
+    "languages": [
+      "fr"
+    ],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
